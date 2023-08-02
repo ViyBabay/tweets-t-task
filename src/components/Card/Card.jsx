@@ -2,8 +2,20 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { fetchFollowing } from "../../services/api";
 import { getLocalStorage } from "../../services/helper";
-import { Avatar, CardItem, Text } from "./Card.styled";
+import {
+  Avatar,
+  AvatarWrapper,
+  BgImg,
+  CardItem,
+  ImgWrapper,
+  SmallLogo,
+  TextFollow,
+  TextTweet,
+  TextWrapper,
+} from "./Card.styled";
 import { CardButton } from "../CardButton/CardButton";
+import Logo1 from "../../assets/Logo1.svg";
+import Logo2 from "../../assets/Logo2.png";
 
 export const Card = ({ id, user, avatar, followers, tweets }) => {
   const [isFollowing, setIsFollowing] = useState(
@@ -32,10 +44,19 @@ export const Card = ({ id, user, avatar, followers, tweets }) => {
 
   return (
     <CardItem key={id}>
-      <img src="Logo" alt="" />
-      <Avatar src={avatar} alt={user} />
-      <Text>{tweets} TWEETS</Text>
-      <Text>{totalFollowers} FOLLOWERS</Text>
+      <ImgWrapper>
+        <SmallLogo src={Logo1} alt="LogoGoIt" />
+        <BgImg src={Logo2} alt="Logo2" />
+      </ImgWrapper>
+      <AvatarWrapper>
+        <Avatar src={avatar} alt={user} />
+      </AvatarWrapper>
+      <TextWrapper>
+        <TextTweet>{tweets.toLocaleString("en-US")} TWEETS</TextTweet>
+        <TextFollow>
+          {totalFollowers.toLocaleString("en-US")} FOLLOWERS
+        </TextFollow>
+      </TextWrapper>
       <CardButton onClick={handleClick} isFollowing={isFollowing} />
     </CardItem>
   );
