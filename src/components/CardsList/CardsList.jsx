@@ -17,7 +17,7 @@ export const CardsList = ({ data }) => {
           <Card
             key={id}
             id={id}
-            name={user}
+            user={user}
             avatar={avatar}
             tweets={tweets}
             followers={followers}

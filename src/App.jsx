@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
 import Tweets from "./pages/Tweets/Tweets";
-import { Suspense } from "react";
 import { Layout } from "./components/Layout/Layout";
 import { Home } from "./pages/Home/Home";
 

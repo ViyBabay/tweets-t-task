@@ -1,3 +1,3 @@
 export const getLocalStorage = (key, defaultValue) => {
-  JSON.parse(localStorage.getItem(key)) || defaultValue;
+  return JSON.parse(localStorage.getItem(key)) || defaultValue;
 };
