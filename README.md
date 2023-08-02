@@ -1,8 +1,7 @@
-# React + Vite
+# Tweeters finder app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was created & based on Vite.
 
-Currently, two official plugins are available:
+The page shows cards with most popular tweeters and show sum of their tweets and followers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Project link](https://viybabay.github.io/tweets-t-task/#/)
