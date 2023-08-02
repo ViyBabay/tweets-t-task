@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchUsers } from "../../services/api";
 import { CardsList } from "../../components/CardsList/CardsList";
 import { LoadMoreBtn } from "../../components/LoadMoreButton/LoadMoreButton.styled";
+import { Loader } from "../../components/Loader/Loader";
 
 const PAGE_SIZE = 3;
 
@@ -39,9 +40,9 @@ const Tweets = () => {
     <>
       <CardsList data={data} />
       {hasMoreData && !isLoading && (
-        <LoadMoreBtn onClick={handleLoadMore}>Завантажити ще</LoadMoreBtn>
+        <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
       )}
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loader />}
     </>
   );
 };

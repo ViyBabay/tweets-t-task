@@ -10,7 +10,7 @@ export const CardButton = ({ onClick, isFollowing }) => {
       isFollowing={isFollowing}
       btnBgColor={btnBgColor}
     >
-      {isFollowing ? <p>Following</p> : <p>Follow</p>}
+      {isFollowing ? <p>FOLLOWING</p> : <p>FOLLOW</p>}
     </CardBtn>
   );
 };
