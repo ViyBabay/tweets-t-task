@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Tweets from "./pages/Tweets/Tweets";
 import { Layout } from "./components/Layout/Layout";
@@ -11,6 +11,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/users" element={<Tweets />} />
+          <Route path="*" element={<Navigate to="/" />}></Route>
         </Route>
       </Routes>
     </HashRouter>
