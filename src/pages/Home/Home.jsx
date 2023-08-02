@@ -1,3 +1,7 @@
 export const Home = () => {
-  return <div>Are you ready to see the most incredible tweeters?</div>;
+  return (
+    <div>
+      <h2>Are you ready to see the most incredible tweeters?</h2>
+    </div>
+  );
 };
